@@ -1,0 +1,57 @@
+[alias]
+
+    # View abbreviated SHA, description, and history graph of the latest 20 commits
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+    # View the current working tree status using the short format
+    s = status -s
+
+    # Commit all changes
+    ca = !git add -A && git commit -av
+    
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+
+[apply]
+
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+
+[filter "lfs"]
+
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+
+[color]
+
+	ui = auto
+
+[core]
+
+	editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[push]
+
+	default = upstream
+
+[merge]
+
+	conflictstyle = diff3
+
+[color "diff-highlight"]
+
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[user]
+
+	name = Alex Dao
+	email = adao7000@gmail.com
+
+[Github]
+
+    user = alexdao
