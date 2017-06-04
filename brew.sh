@@ -6,7 +6,7 @@
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -32,6 +32,7 @@ brew install bash
 brew tap homebrew/versions
 
 # Install more recent versions of some macOS tools.
+brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
@@ -50,6 +51,8 @@ git config --global color.diff-highlight.newHighlight "green bold 22"
 brew install git
 brew install git-lfs
 brew install mobile-shell
+brew install node
+brew install python3
 brew install p7zip
 brew install speedtest_cli
 brew install testssl
