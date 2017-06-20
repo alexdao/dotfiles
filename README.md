@@ -2,7 +2,7 @@
 
 This is a collection of dotfiles and scripts I use for customizing OS X and other machines to my liking and setting up the software development tools I use on a day-to-day basis. They should be cloned to your home directory so that the path is `~/dotfiles/`.  The included setup script creates symlinks from your home directory to the files which are located in `~/dotfiles/`.
 
-![Terminal.app]()
+![Terminal.app](terminal_screenshot.png)
 
 I use `zsh` as my shell. The install script `setup.sh` works on OS X and Linux machines and will: 
 
