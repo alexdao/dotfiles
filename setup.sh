@@ -50,5 +50,6 @@ install_zsh
 ln -sf ~/dotfiles/zsh/themes/alex.zsh-theme $HOME/.oh-my-zsh/themes
 ln -sf ~/dotfiles/.vim/.vimrc $HOME/.vimrc
 ln -sf ~/dotfiles/.zshrc $HOME/.zshrc
+ln -sf ~/dotfiles/.gitconfig $HOME/.gitconfig
 
 zsh ~/.zshrc
