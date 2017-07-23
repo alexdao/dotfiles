@@ -28,3 +28,6 @@ source $ZSH/oh-my-zsh.sh
 # Added by Alex on 2016-06-25
 export REACT_EDITOR=atom
 
+# List files by pressing return
+accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
+zle -N accept-line
