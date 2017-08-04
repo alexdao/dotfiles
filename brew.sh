@@ -20,23 +20,14 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
-# Download fish, add it as a shell, and set it as default
-brew install fish
-if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
-  echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/fish;
-fi;
-
 # Install Bash 4.
 brew install bash
-brew tap homebrew/versions
 
 # Install more recent versions of some macOS tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
+brew install grep
+brew install openssh
+brew install screen
 
 # Install other useful binaries.
 brew install ack
@@ -56,9 +47,11 @@ brew install python3
 brew install p7zip
 brew install speedtest_cli
 brew install testssl
+brew install tmux
 brew install tree
 brew install watchman
 brew install wget
+brew install zsh
 
 # Remove outdated versions from the cellar.
 brew cleanup
