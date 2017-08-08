@@ -24,7 +24,7 @@ brew install gnu-sed --with-default-names
 brew install bash
 
 # Install more recent versions of some macOS tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
