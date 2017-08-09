@@ -24,12 +24,17 @@ This changes the default shell to zsh, and takes effect as soon as a new zsh is 
 
 ## Installation
 
+1. Install Powerline fonts (https://gist.github.com/1595572) 
+
+2. 
 ```sh
 $ git clone https://github.com/alexdao/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles
 $ chmod +x setup.sh mac.sh brew.sh
 $ ./mac.sh && ./brew.sh && ./setup.sh
 ```
+
+3. Import ~/dotfiles/themes/forest_itermcolors to iTerm2
 
 ## References
 
