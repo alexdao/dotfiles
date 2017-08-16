@@ -53,4 +53,8 @@ ln -sf ~/dotfiles/.zshrc $HOME/.zshrc
 ln -sf ~/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf ~/dotfiles/.hushlogin $HOME/.hushlogin
 
+# Use these symlinks if using FB dev env
+# ln -sf ~/dotfiles/zsh/themes/alex_fb.zsh-theme $HOME/.oh-my-zsh/themes/alex_fb.zsh-theme
+# ln -sf ~/dotfiles/.zshrc_fb $HOME/.zshrc
+
 zsh ~/.zshrc

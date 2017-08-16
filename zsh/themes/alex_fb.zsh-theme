@@ -86,7 +86,7 @@ function prompt_online() {
 # Dir: current working directory
 prompt_dir() {
   if [[ -n $(_dotfiles_scm_info) ]]; then
-    prompt_segment blue black "$(_dotfiles_scm_info)" | tr -d ' '
+    prompt_segment blue black "⭠ $(_dotfiles_scm_info)" | tr -d ' '
   fi
 }
 
@@ -124,7 +124,7 @@ function hgproml {
   local at="%{$fg[yellow]%}@"
   local host="%{$fg[green]%}%m"
 
-  prompt_segment green default "$user$at$host%{$fg[yellow]%}:"
+  prompt_segment yellow black "$user$at$host%{$fg[yellow]%}:"
 }
 
 ## Main prompt
