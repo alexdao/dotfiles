@@ -17,10 +17,25 @@ export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:
 alias bii='buck install -r instagram'
 alias bbi='buck build instagram'
 alias bia='buck install -r fb4a'
+alias bua='buck uninstall fb4a'
 alias bba='buck build fb4a'
 alias bio='buck install -r orca'
 alias bbo='buck build orca'
 alias sz='source ~/.zshrc'
+alias scv='adb shell screenrecord /sdcard/demo.mp4'
+alias scvp='adb pull /sdcard/demo.mp4'
+alias loge='pidcat com.facebook.wakizashi -l E'
+alias logd='pidcat com.facebook.wakizashi -l D'
+alias emulator_n5='/opt/android_sdk/tools/emulator @Nexus_5X_API_25_2 &'
+
+# Aliases for hg
+alias hgd='hg diff -r .^'
+alias hga='hg amend'
+alias hgs='hg status'
+alias hgs1='hg status --rev .^'
+alias ap='arc pull'
+alias adp='arc diff --preview'
+alias afc='arc feature --cleanup'
 
 . ~/.fbchef/environment
 
@@ -28,7 +43,7 @@ alias sz='source ~/.zshrc'
 alias sc="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > ~/Desktop/`date "+Phone\ Screen\ Shot\ %Y-%m-%d\ at\ %H.%M.%S"`.png"
 
 # List files by pressing return
-accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
+accept-line() {: "${BUFFER:="hg ssl"}"; zle ".$WIDGET"}
 zle -N accept-line
 
 # Send files via command line using https://transfer.sh
