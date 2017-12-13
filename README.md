@@ -13,6 +13,9 @@ I use `zsh` as my shell. The install script `setup.sh` works on OS X and Linux m
 
 This changes the default shell to zsh, and takes effect as soon as a new zsh is spawned or on next login.
 
+ZSH Plugins to install:
+https://github.com/zsh-users/zsh-autosuggestions
+
 ## Features
 
 - Git aliases

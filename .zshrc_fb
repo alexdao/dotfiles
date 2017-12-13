@@ -8,6 +8,7 @@ export EDITOR=vim
 ZSH_THEME="alex"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(git)
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
@@ -26,7 +27,7 @@ alias scv='adb shell screenrecord /sdcard/demo.mp4'
 alias scvp='adb pull /sdcard/demo.mp4'
 alias loge='pidcat com.facebook.wakizashi -l E'
 alias logd='pidcat com.facebook.wakizashi -l D'
-alias emulator_n5='/opt/android_sdk/tools/emulator @Nexus_5X_API_25_2 &'
+alias emulator_n5='/opt/android_sdk/tools/emulator @test &'
 
 # Aliases for hg
 alias hgd='hg diff -r .^'
