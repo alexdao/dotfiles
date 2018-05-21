@@ -45,6 +45,7 @@ brew install mobile-shell
 brew install node
 brew install python3
 brew install p7zip
+brew install shellcheck
 brew install speedtest_cli
 brew install testssl
 brew install terminal-notifier
