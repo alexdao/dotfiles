@@ -51,7 +51,6 @@ brew install testssl
 brew install terminal-notifier
 brew install tmux
 brew install tree
-brew install watchman
 brew install wget
 brew install zsh
 
