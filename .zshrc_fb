@@ -12,31 +12,56 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(git)
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/Users/alexdao/buck/bin:/Users/alexdao/go/bin:/Users/alexdao/bin:/Users/alexdao/homebrew/bin:$PATH
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/bin:$PATH
 
 # Aliases for builds & tests
 alias bii='buck install -r instagram'
 alias bbi='buck build instagram'
 alias bia='buck install -r fb4a'
 alias bua='buck uninstall fb4a'
+alias bua='buck uninstall fb4a'
 alias bba='buck build fb4a'
 alias bio='buck install -r orca'
 alias bbo='buck build orca'
+alias bbw='buck build work'
+alias biw='buck install -r work'
+alias buck-suggestions='scripts/editus add_suggestions'
 alias sz='source ~/.zshrc'
+alias se='vim ~/.zshrc'
 alias scv='adb shell screenrecord /sdcard/demo.mp4'
 alias scvp='adb pull /sdcard/demo.mp4'
 alias loge='pidcat com.facebook.wakizashi -l E'
 alias logd='pidcat com.facebook.wakizashi -l D'
 alias emulator_n5='/opt/android_sdk/tools/emulator @test &'
+alias rage='./scripts/dumpapp shake'
 
 # Aliases for hg
 alias hgd='hg diff -r .^'
 alias hga='hg amend'
 alias hgs='hg status'
 alias hgs1='hg status --rev .^'
+alias hgus='hg up fbandroid/stable'
 alias ap='arc pull'
 alias adp='arc diff --preview'
+alias ado='arc diff --only'
 alias afc='arc feature --cleanup'
+alias jfs='jf submit'
+alias jfsd='jf submit --no-publish'
+alias hgus='hg up fbandroid/stable'
+alias stable='hg up fbandroid/stable'
+alias focus='arc focus --targets fb4a --pinned //java/com/facebook/fbavatar/... //java/com/facebook/stickers/... //java/com/facebook/feedplugins/attachments/sociallist //instrumentation_tests/com/facebook/fbavatar/...' --open
+
+# Rebases one commit on top of another
+stack() {
+  hg rebase -s $1 -d $2
+}
+
+# Override MC values
+mc() {
+  ${FBANDROID_DIR}/scripts/dumpapp mobileconfig qe set $1 $2:$3
+  ${FBANDROID_DIR}/scripts/restart_fb4a
+  echo "\n"
+}
 
 . ~/.fbchef/environment
 
