@@ -9,6 +9,7 @@ ZSH_THEME="alex"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "/usr/facebook/ops/rc/master.zshrc"
 
 plugins=(git)
 
@@ -35,7 +36,7 @@ stack() {
 }
 
 # List files by pressing return
-accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
+accept-line() {: "${BUFFER:="hg ssl"}"; zle ".$WIDGET"}
 zle -N accept-line
 
 # Send files via command line using https://transfer.sh
