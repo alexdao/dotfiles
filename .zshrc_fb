@@ -11,8 +11,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(git)
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/bin:$PATH
 
 # Aliases for builds & tests
 alias bii='buck install -r instagram'
@@ -135,4 +133,5 @@ export ANDROID_SDK=/opt/android_sdk
 export ANDROID_NDK_REPOSITORY=/opt/android_ndk
 export ANDROID_HOME=${ANDROID_SDK}
 export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
-
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/bin:$PATH

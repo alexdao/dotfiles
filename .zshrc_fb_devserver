@@ -8,16 +8,31 @@ export EDITOR=vim
 ZSH_THEME="alex"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 plugins=(git)
 
 # Aliases for builds & tests
-alias bii='buck install -r instagram'
-alias bbi='buck build instagram'
-alias bia='buck install -r fb4a'
-alias bba='buck build fb4a'
-alias bio='buck install -r orca'
-alias bbo='buck build orca'
 alias sz='source ~/.zshrc'
+alias se='vim ~/.zshrc'
+
+# Aliases for hg
+alias hgd='hg diff -r .^'
+alias hga='hg amend'
+alias hgs='hg status'
+alias hgs1='hg status --rev .^'
+alias hgus='hg up fbandroid/stable'
+alias ap='arc pull'
+alias adp='arc diff --preview'
+alias ado='arc diff --only'
+alias afc='arc feature --cleanup'
+alias jfs='jf submit'
+alias jfsd='jf submit --no-publish'
+
+# Rebases one commit on top of another
+stack() {
+  hg rebase -s $1 -d $2
+}
 
 # List files by pressing return
 accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
@@ -30,30 +45,30 @@ if [ $? -ne 0 ]; then
   return 1
 fi
 
-transfer() { 
+transfer() {
     # check arguments
-    if [ $# -eq 0 ]; 
-    then 
+    if [ $# -eq 0 ];
+    then
         echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"
         return 1
     fi
 
     # get temporarily filename, output is written to this file show progress can be showed
     tmpfile=$( mktemp -t transferXXX )
-    
+
     # upload stdin or file
     file=$1
 
-    if tty -s; 
-    then 
-        basefile=$(basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g') 
+    if tty -s;
+    then
+        basefile=$(basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
 
         if [ ! -e $file ];
         then
             echo "File $file doesn't exists."
             return 1
         fi
-        
+
         if [ -d $file ];
         then
             # zip directory and transfer
@@ -65,15 +80,14 @@ transfer() {
             # transfer file
             curl --progress-bar --upload-file "$file" "https://transfer.sh/$basefile" >> $tmpfile
         fi
-    else 
+    else
         # transfer pipe
         curl --progress-bar --upload-file "-" "https://transfer.sh/$file" >> $tmpfile
     fi
-   
+
     # cat output link
     cat $tmpfile
 
     # cleanup
     rm -f $tmpfile
 }
-
