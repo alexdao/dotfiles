@@ -32,6 +32,11 @@ export REACT_EDITOR=atom
 accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
 zle -N accept-line
 
+# Rebases one commit on top of another
+stack() {
+  hg rebase -s $1 -d $2
+}
+
 # Send files via command line using https://transfer.sh
 curl --version 2>&1 > /dev/null
 if [ $? -ne 0 ]; then
