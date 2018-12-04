@@ -30,7 +30,6 @@ set visualbell      " Use visual bell instead of beeping when doing something wr
 
 syntax enable
 set background=dark
-colorscheme solarized
 
 " Custom Settings
 
