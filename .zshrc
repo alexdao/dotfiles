@@ -21,6 +21,7 @@ export GRADLE_HOME=/Applications/gradle-2.12
 export PATH="$PATH:$GRADLE_HOME/bin"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
