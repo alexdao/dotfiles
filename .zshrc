@@ -15,19 +15,12 @@ plugins=(git zsh-autosuggestions)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
-
-# Added by Alex on 2016-04-18
-# Env var for Gradle
-export GRADLE_HOME=/Applications/gradle-2.12
-export PATH="$PATH:$GRADLE_HOME/bin"
+export PATH="/usr/local/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Added by Alex on 2016-06-25
-export REACT_EDITOR=atom
+alias sz='source ~/.zshrc'
+alias se='vim ~/.zshrc'
 
 # List files by pressing return
 accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
