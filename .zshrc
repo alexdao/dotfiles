@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+ZSH_DISABLE_COMPFIX=true
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -9,13 +10,15 @@ ZSH_THEME="alex"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 # User configuration
 
+<<<<<<< HEAD
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export ANDROID_HOME=/Users/hydralisk/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH="/usr/local/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -25,6 +28,7 @@ alias ga='git add --all'
 alias gp='git push'
 alias gpu='git pull'
 alias ot='cd ~/github/order-tracker/www && source env/bin/activate'
+
 alias sz='source ~/.zshrc'
 alias se='vim ~/.zshrc'
 
