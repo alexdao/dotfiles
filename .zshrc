@@ -14,7 +14,6 @@ plugins=(git zsh-autosuggestions)
 
 # User configuration
 
-<<<<<<< HEAD
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export ANDROID_HOME=/Users/hydralisk/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
