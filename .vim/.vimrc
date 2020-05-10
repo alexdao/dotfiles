@@ -24,6 +24,7 @@ set backspace=indent,eol,start " Allow backspacing over autoindent, line breaks 
 set laststatus=2    " Always display the status line, even if only 1 window is displayed
 set confirm         " Instead of failing a command because of unsaved changes, instead raise a dialogue asking if you wish to save changed files.
 set visualbell      " Use visual bell instead of beeping when doing something wrong
+set relativenumber  " Set relative line numbers
 
 
 " Appearance
