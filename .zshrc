@@ -10,22 +10,15 @@ ZSH_THEME="alex"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 # User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-export ANDROID_HOME=/Users/hydralisk/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias gs='git status'
 alias ga='git add --all'
 alias gp='git push'
 alias gpu='git pull'
-alias ot='cd ~/github/order-tracker/www && source env/bin/activate'
 
 alias sz='source ~/.zshrc'
 alias se='vim ~/.zshrc'
@@ -33,11 +26,6 @@ alias se='vim ~/.zshrc'
 # List files by pressing return
 accept-line() {: "${BUFFER:="ls -lah"}"; zle ".$WIDGET"}
 zle -N accept-line
-
-# Rebases one commit on top of another
-stack() {
-  hg rebase -s $1 -d $2
-}
 
 # Send files via command line using https://transfer.sh
 curl --version 2>&1 > /dev/null
